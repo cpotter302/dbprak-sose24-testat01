@@ -1,0 +1,6 @@
+.idea
+.vscode
+pgdata
+testat-01-parser/testat-01-parser.iml
+out
+testat-01-parser/logs/error.csv
