@@ -1,6 +1,5 @@
 .idea
 .vscode
 pgdata
-testat-01-parser/testat-01-parser.iml
+dbprak-sose24-testat01.iml
 out
-testat-01-parser/logs/error.csv
