@@ -7,7 +7,7 @@
 3. Die Umgebungsvariablen müssen für das Ausführen des Ladeporgramms gesetzt werden (DATA_DRESDEN_PATH, DATA_LEIPZIG_PATH, DATA_REVIEWS_PATH, DATA_CATEGORIES_PATH).
   Dasselbe gilt für die PostgreSQL Konfiguration (DATABASE_URL, DATABASE_USER, DATABASE_PW)
 4. Zum Ausführen der Jar-Datei wird eine Java Installation in der Version >= 17 benötigt. 
-   Der benötigte Datenbanktreiber (postgresql-42.7.3.jar) ist mit in den Dependencies enthalten (/lib)
+   Der benötigte Datenbanktreiber (postgresql-42.7.3.jar) ist mit in den Dependencies enthalten
 5. Ausführen der Executable JAR:
 
 UNIX: 
