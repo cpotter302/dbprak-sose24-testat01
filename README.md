@@ -2,8 +2,6 @@
 
 # Testat 01 
 
-
-0. Das ER-Modell ist als PDF und PNG unter testat-01-parser/diagrams/ zu finden.
 1. PostgreSQL DB aus dem ![Compose-File](docker-compose.yaml) verwenden (dort sind User+PW und DB-Name angegeben) oder eigene DB Instanz hochfahren.
 2. Nach dem Start der Datenbank das SQL-Skript zum Anlegen der Datenbanktabellen ausführen (![create_tables.sql](sql/create_tables.sql)) + PSQL Function und Trigger (![function_trigger.sql](sql/functions_triggers.sql))
 3. Die Umgebungsvariablen müssen für das Ausführen des Ladeporgramms gesetzt werden (DATA_DRESDEN_PATH, DATA_LEIPZIG_PATH, DATA_REVIEWS_PATH, DATA_CATEGORIES_PATH).
