@@ -13,8 +13,8 @@
 5. Ausführen der Executable JAR, alle Objekte die in die DB geschrieben werden werden auf der Konsole geloggt, inkl. Fehler.
    Die Fehler werden in einer CSV Datei gespeichert, die in der Umgebungsvariable LOG_OUTPUT_FILE angegeben wird.
    Die Umgebungsvariable SILENT_MODE kann auf true gesetzt werden, um die Ausgabe auf der Konsole zu unterdrücken.
-   Ausgabe in ![CSV-Logdatei](testat-01-parser/logs/error.csv)
-   Beispiel für das Ausführen des Programms: 
+   Die Ausgabe der Fehler wird in eine ![CSV-Logdatei](testat-01-parser/logs/error.csv) geschrieben.
+   Ausführen des Programms: 
 
 UNIX: 
 ```bash 
