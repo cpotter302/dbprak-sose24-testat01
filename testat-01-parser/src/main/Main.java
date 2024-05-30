@@ -155,6 +155,7 @@ public class Main {
                 if (data.length >= 4) {
                     String productID = data[0].replace("\"", "");
                     String rating = data[1];
+                    String reviewDate = data[3];
                     String customerID = data[4];
 
                     // Handle customer
@@ -172,7 +173,10 @@ public class Main {
                         continue;
                     }
 
-                    Review review = new Review(customer, Integer.parseInt(rating), product.getProductId());
+                    ZoneId defaultZoneId = ZoneId.systemDefault();
+                    Date parsedReviewDate = Date.from(LocalDate.parse(reviewDate).atStartOfDay(defaultZoneId).toInstant());
+
+                    Review review = new Review(customer, Integer.parseInt(rating), product.getProductId(), new java.sql.Date(parsedReviewDate.getTime()));
                     review.setDescription(data[6]);
 
                     // Create review only if product exists
@@ -325,8 +329,8 @@ public class Main {
         }
         var pages = Helpers.getInnerText(node);
         if (pages.isEmpty()) {
-            DBLogger.logRejectedRecord("BOOK", "pages", "text missing: pages " + newProduct.getProductId());
-            return false;
+            // Pages leer wenn Buch ein Hörbuch -> setze pages dann 0
+            pages = "0";
         }
 
         //Get publishDate

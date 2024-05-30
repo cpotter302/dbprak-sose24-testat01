@@ -117,6 +117,7 @@ CREATE TABLE Review
 (
     review_id   serial      NOT NULL,
     customer_id varchar(30) NOT NULL,
+    review_date date        NOT NULL,
     rating      integer     NOT NULL,
     description text        NOT NULL,
     product_id  varchar(10) NOT NULL,
