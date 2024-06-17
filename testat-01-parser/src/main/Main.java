@@ -304,7 +304,8 @@ public class Main {
                             break;
                     }
                 } else {
-                    DBLogger.LOG.info("Product already exists");
+                    // Wenn das Produkt existiert muss trotzdem noch die Offer Information erstellt werden
+                    createOfferWrapper((Element) currentItem, con, newProduct, newShop);
                 }
             }
 
